@@ -1,0 +1,38 @@
+.body{
+    display: grid;
+    background-color: rgb(223, 222, 222);
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+    margin: 30px auto;
+    font-family: Lato, sans-serif;
+    line-height: 1.5;
+}
+
+.body__mainHeadline{
+    align-items: start;
+margin-bottom: 20px;
+}
+
+.body__secondHeadline{
+    padding: 20px;
+    margin-top: 0px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+
+.body__input{
+    width: 500px ;
+    margin: 10px;
+
+}
+
+.body__button{
+    background-color: teal;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    text-align: center;
+}
