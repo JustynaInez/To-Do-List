@@ -1,0 +1,22 @@
+.form{
+    display: flex;
+}
+
+.form__input{
+    display: flex;
+    width: 500px ;
+    margin: 10px;
+    align-self: center;
+}
+
+.form__button{
+    display: flex;
+    background-color: teal;
+    padding: 10px;
+    font-size: 15px;
+    color: whitesmoke;
+    border: none;
+    height: 33px;
+    align-self: center;
+    font-size: small;
+}
