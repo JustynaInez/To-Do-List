@@ -6,30 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> To do List</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+        integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
     <link href="css/body.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
     <link href="css/headline.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
     <link rel="icon" href="images/icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
 </head>
-<body class= "body">
-<h1 class = "Headline">
-    Lista Zadań
-</h1>
-<h2 class= "Headline__second">
-   Dodaj nowe zadanie
-    <form class= "form">
-        <input class = "form__input">
-        <button class = "form__button">Dodaj zadanie</button>
-    </form>
-</h2>
-<h2 class= "Headline__second">
-    Lista zadań
-    <li>
-    </li>
-    
-</h2>
-</body>
 
+<body class="body">
+
+    <h1 class="Headline">
+        Lista Zadań
+    </h1>
+    <section class="section">
+        <h2 class="Headline__second">Dodaj nowe zadanie</h2>
+
+        <form class="form">
+            <input class="form__input">
+            <button class="form__button">Dodaj zadanie</button>
+        </form>
+    </section>
+
+    <section class="section">
+        <h2 class="Headline__second"> Lista zadań</h2>
+        <div class="list">
+            <li>
+            </li>
+        </div>
+    </section>
+        
+
+
+</body>

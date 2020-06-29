@@ -1,5 +1,7 @@
 .form{
     display: flex;
+    border-top: 1px solid rgb(204, 199, 199);
+    background-color: white;
 }
 
 .form__input{
@@ -19,4 +21,5 @@
     height: 33px;
     align-self: center;
     font-size: small;
+    margin: 10px;
 }
