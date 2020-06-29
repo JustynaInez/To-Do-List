@@ -1,4 +1,4 @@
-.body{
+.body {
     background-color: rgb(223, 222, 222);
     max-width: 100%;
     width: 660px;
@@ -10,6 +10,8 @@
     font-size: 13px;
 }
 
-
-
-
+@media (max-width: 700px) {
+    .body {
+        max-width: 90%;
+    }
+}
