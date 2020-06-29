@@ -2,11 +2,11 @@
     display: flex;
     border-top: 1px solid rgb(204, 199, 199);
     background-color: white;
+    flex-direction: row;
 }
 
 .form__input{
-    display: flex;
-    width: 500px ;
+    width: 500px;
     margin: 10px;
     align-self: center;
 }
@@ -18,8 +18,9 @@
     font-size: 15px;
     color: whitesmoke;
     border: none;
-    height: 33px;
     align-self: center;
     font-size: small;
     margin: 10px;
+    flex-direction: column;
+
 }

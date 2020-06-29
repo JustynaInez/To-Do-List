@@ -1,5 +1,10 @@
 .section{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
     background-color: white;
     margin-bottom: 5px;
     margin-top: 5px;
+    max-width: 100%;
 }
