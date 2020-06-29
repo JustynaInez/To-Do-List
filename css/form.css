@@ -21,3 +21,20 @@
     font-size: small;
     margin: 10px;
 }
+
+@media(max-width:700px){
+    .form {
+        flex-direction: column;
+    }
+    .form__button{
+     align-self: center;
+     width: 520px;
+     max-width: 95%;
+     margin:5px
+    }
+    .form__input {
+        max-width: 90%;
+    }
+
+    
+}
