@@ -7,21 +7,17 @@
 
 .form__input{
     width: 500px;
-    height: 20px;
     margin: 10px;
     align-self: center;
+    padding: 5px;
 }
 
 .form__button{
-    
     background-color: teal;
     padding: 10px;
     font-size: 15px;
     color: whitesmoke;
     border: none;
-    align-self: center;
     font-size: small;
     margin: 10px;
-  
-
 }
