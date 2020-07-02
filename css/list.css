@@ -1,4 +1,29 @@
-.list{
+.list {
     border-top: 1px solid rgb(204, 199, 199);
-    padding: 20px;
+    padding: 31px;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-gap: 20px 30px;
+    grid-auto-columns: auto;
+}
+
+
+.buttonDone {
+    background-color: rgb(29, 177, 29);
+    border: white;
+    width: 30px;
+    height: 25px;
+  
+   
+}
+.buttonRemove{
+    background-color: rgb(255, 0, 0);
+    border: white;
+    width: 30px;
+    height: 25px;
+}
+
+.div__item{
+   word-break: break-all;
+    padding: 5px;
 }
