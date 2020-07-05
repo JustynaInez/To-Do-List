@@ -1,22 +1,18 @@
 
 {
-
-
     const tasks = [
-
     ];
+
     const addNewTask = (newTask) => {
         tasks.push({
             content: newTask,
         });
-
         render();
     };
 
     const removeTask = (index) => {
         tasks.splice(index, 1);
         render();
-
     }
 
     const doneTask = (index) => {
@@ -28,16 +24,19 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString +=
-          `
-           <button  class="js-remove buttonRemove grid"> &#10006; </button>
-               
-            <span class = "div__item"
-            ${task.done ? "style =\"text-decoration: line-through\"" : ""} 
+          ` <button class="js-done buttonDone grid">
+            ${task.done ? "&#10004;" : ""} 
+            </button>  
+             
+            <span class = "div__item
+            ${task.done ? "div__item--done" : ""}"
             >
              ${task.content}
             </span>
             
-             <button class="js-done buttonDone grid"> &#10004;</button>  
+            <button  class="js-remove buttonRemove grid">
+            &#10006;
+            </button>
                 
           `
         }
