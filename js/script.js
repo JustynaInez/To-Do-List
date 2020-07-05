@@ -60,23 +60,27 @@
         });
     };
 
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+    
+    const newTaskElement = document.querySelector(".js-newTask");
+    const newTask = newTaskElement.value.trim();
+
+        if (newTask !== ""){
+        addNewTask(newTask);
+        newTaskElement.value = "";
+        }
+       newTaskElement.focus();
+        
+    };
 
 
     const init = () => {
         render();
         const form = document.querySelector(".js-form");
 
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
-            document.querySelector(".js-newTask").focus();
-            const newTask = document.querySelector(".js-newTask").value.trim();
-            if (newTask === "") {
-                return;
-            }
-
-            addNewTask(newTask);
-
-        })
+        form.addEventListener("submit", onFormSubmit)
+    
     }
 
     init();

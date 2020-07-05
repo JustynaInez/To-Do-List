@@ -10,3 +10,9 @@
    max-width: 100%;
 }
 
+.section__headline {
+    margin-top: 0px;
+    background-color: white;
+    margin-bottom: 0px;
+    padding: 15px;
+}

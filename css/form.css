@@ -26,12 +26,7 @@
     .form {
         flex-direction: column;
     }
-    .form__button{
-     align-self: center;
-     width: 515px;
-     max-width: 95%;
-     margin:5px
-    }
+    
     .form__input {
         max-width: 90%;
     }
