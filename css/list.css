@@ -9,18 +9,32 @@
 
 
 .buttonDone {
-    background-color: rgb(29, 177, 29);
+    background-color: hsl(120, 72%, 40%);
     border: white;
     width: 30px;
     height: 25px;
-  
-   
+    transition: 1s;
 }
+.buttonDone:hover{
+    background-color: hsl(120, 72%, 45%); 
+}
+.buttonDone:active{
+    background-color: hsl(120, 72%, 50%); ;
+}
+
 .buttonRemove{
-    background-color: rgb(255, 0, 0);
+    background-color: hsl(0, 100%, 50%);
     border: white;
     width: 30px;
     height: 25px;
+    transition: 1s;
+}
+.buttonRemove:hover{
+    background-color:hsl(0, 100%, 40%); 
+}
+
+.buttonRemove:active{
+    background-color:hsl(0, 100%, 30%); 
 }
 
 .div__item{
