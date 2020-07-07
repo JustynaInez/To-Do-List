@@ -1,14 +1,11 @@
 
 {
-    const tasks = [
-    ];
+    let tasks = [];
 
     const addNewTask = (newTask) => {
-        tasks.push({
-            content: newTask,
-        });
-        render();
-    };
+           tasks.push ({content: newTask})
+             render();
+             };
 
     const removeTask = (index) => {
         tasks.splice(index, 1);
@@ -16,7 +13,7 @@
     }
 
     const doneTask = (index) => {
-        tasks[index].done = !tasks[index].done;
+           tasks[index].done = !tasks[index].done;
         render();
     }
 
@@ -37,10 +34,17 @@
             <button  class="js-remove buttonRemove grid">
             &#10006;
             </button>
-                
           `
         }
         document.querySelector(".js-list").innerHTML = htmlString;
+
+        let htmlStringHeadline = "";
+        if (htmlString)
+        {htmlStringHeadline += ` 
+        <button class="buttonsShowAfterClick"> Ukończ wszystkie </button>
+        <button class="buttonsShowAfterClick"> Ukryj ukończone </button>`}
+      
+        document.querySelector(".js-headline").innerHTML = htmlStringHeadline;
 
         const removeButtons = document.querySelectorAll(".js-remove");
 
