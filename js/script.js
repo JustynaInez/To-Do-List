@@ -34,7 +34,7 @@
         render();
 }
 
-const markAllTasksDone = () => {
+    const markAllTasksDone = () => {
     tasks = tasks.map((task) => ({
         ...task,
         done: true,
@@ -42,7 +42,7 @@ const markAllTasksDone = () => {
     render();
  }
 
- const toggleHideDoneButtons = ()=>{
+    const toggleHideDoneButtons = ()=>{
     hideAllTasksDone = !hideAllTasksDone;
     render();
 }
@@ -63,7 +63,7 @@ const markAllTasksDone = () => {
 
     const toggleDoneButtons = document.querySelectorAll(".js-done");
 
-    toggleDoneButtons.forEach((toggleDoneButton, index) => 
+        toggleDoneButtons.forEach((toggleDoneButton, index) => 
     {
         toggleDoneButton.addEventListener("click", () => 
         {
@@ -87,14 +87,13 @@ const markAllTasksDone = () => {
             }
     };
 
-   
-
     const renderTask = () => {
         let htmlString = "";
-        for (const task of tasks) {
+        for (const task of tasks)
+        {
             htmlString +=
           `<div class ="list ${task.done && hideAllTasksDone ? "list--hidden" :""}">
-           <button class="js-done buttonDone grid">
+           <button class="js-done buttonDone">
             ${task.done ? "&#10004;" : ""} 
             </button>  
              
@@ -112,21 +111,19 @@ const markAllTasksDone = () => {
         }
         document.querySelector(".js-list").innerHTML = htmlString;
     };
-        
             
-
     bindButtonsEvents = () => {
         const markAllDoneButtons = document.querySelector(".js-doneAll");
 
-        if(markAllDoneButtons){
+            if(markAllDoneButtons){
             markAllDoneButtons.addEventListener("click", markAllTasksDone)
-        }
+            };
 
         const hideAllDoneTasks = document.querySelector(".js-hideAll");
 
-        if(hideAllDoneTasks) {
+            if(hideAllDoneTasks) {
             hideAllDoneTasks.addEventListener("click", toggleHideDoneButtons)
-        };
+            };
     };    
 
     const render = () =>{
@@ -143,8 +140,8 @@ const markAllTasksDone = () => {
     {
         event.preventDefault();
     
-    const newTaskElement = document.querySelector(".js-newTask");
-    const newTask = newTaskElement.value.trim();
+        const newTaskElement = document.querySelector(".js-newTask");
+        const newTask = newTaskElement.value.trim();
 
         if (newTask !== "")
         {
