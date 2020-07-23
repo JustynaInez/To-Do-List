@@ -21,11 +21,17 @@
         render();
     };
 
-    const doneTask = (index) => 
+    const doneTask = (index) => {
+    tasks = [ 
+        ...tasks.slice(0, index),
     {
-        tasks[index].done = !tasks[index].done;
+        ...tasks[index],
+        done: !tasks[index].done
+    },
+    ...tasks.slice(index +1),
+    ];
         render();
-    }
+}
 
     const bindEventsRemove = () => 
     {
@@ -51,20 +57,27 @@
         });
     });}
 
-    const buttonHideDoneEverything = (htmlString) =>{
-        
+    const renderButtons =() => {
     
             let htmlStringHeadline = "";
-            if (htmlString)
+            if (tasks.length)
             {
                 htmlStringHeadline += ` 
-            <button class="buttonsShowAfterClick"> Ukończ wszystkie </button>
-            <button class="buttonsShowAfterClick"> Ukryj ukończone </button>`
+            <button class="buttonsShowAfterClick js-doneAll"> Ukończ wszystkie </button>
+            <button class="buttonsShowAfterClick js-hideAll"> Ukryj ukończone </button>`
             }
           
             document.querySelector(".js-headline").innerHTML = htmlStringHeadline;
 
-    }
+    };
+
+    const markAllTasksDone = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true,
+        }));
+        render();
+     }
 
     const renderTask = () => 
         {
@@ -89,21 +102,23 @@
         }
         document.querySelector(".js-list").innerHTML = htmlString;
     
-            buttonHideDoneEverything(htmlString);
-    
     };
 
-    const renderButtons = () => {};
+    bindButtonsEvents = () => {
+        const markAllDoneButtons = document.querySelector(".js-doneAll")
 
-    const bindButtonsEvents = () => {};
-
+        if(markAllDoneButtons){
+            markAllDoneButtons.addEventListener("click", 
+           markAllTasksDone 
+           )}
+        };
     const render = () =>{
-
+        
         renderTask();
         renderButtons();
    
         bindEventsRemove();
-        bindButtonsEvents ();
+        bindButtonsEvents();
         bindEventsDone ();
     };
 
