@@ -81,8 +81,9 @@ const markAllTasksDone = () => {
 
             {
                 buttonsElement.innerHTML =` 
-            <button class="buttonsShowAfterClick js-doneAll"> Ukończ wszystkie </button>
-            <button class="buttonsShowAfterClick js-hideAll"> Ukryj ukończone </button>`
+            <button class="buttonsShowAfterClick js-doneAll" ${tasks.every(({done})=> done) ? "disabled" : "" }> Ukończ wszystkie </button>
+           
+            <button class="buttonsShowAfterClick js-hideAll">${hideAllTasksDone ? "Pokaż wszystkie" : "Ukryj ukończone"} </button>`
             }
     };
 

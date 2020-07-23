@@ -37,6 +37,9 @@
 .buttonsShowAfterClick:hover{
     color: hsl(180, 100%, 35%);;
 }
+.buttonsShowAfterClick:disabled{
+    color: rgba(197, 193, 193, 0.829);
+}
 
 @media (max-width: 700px){
     .section__flex{
