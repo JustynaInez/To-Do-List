@@ -6,7 +6,9 @@
     grid-gap: 20px 30px;
  
 }
-
+.list--hidden{
+    display: none;
+}
 
 .buttonDone {
     background-color: hsl(120, 72%, 40%);
